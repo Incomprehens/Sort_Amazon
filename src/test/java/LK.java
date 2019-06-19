@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
@@ -11,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LK {
 
 
-    Main main= new Main();
+    Main main = new Main();
 
 
     
@@ -28,17 +29,22 @@ public class LK {
     }*/
 
     @Test
-            public void start()
-    {
-       main.open()
-             .getTypeLogin();
-       main.getNameInLK().shouldBe(visible);
+    public void LK() {
+        main.open()
+                .getTypeLogin();
+        main.getNameInLK().shouldBe(visible);
 
 
+        Configuration.holdBrowserOpen = true;
 
+    }
 
-       Configuration.holdBrowserOpen = true;
+    @Test
+    public void Sort() {
+        Selenide.open("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/");
 
+        main.sortUP
+        Configuration.holdBrowserOpen = true;
     }
 
 }
