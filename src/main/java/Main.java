@@ -17,6 +17,11 @@ public class Main {
     private By typeMailName = xpath(".//*[@data-test-id=\"emailField\"]");
     private By typeMailPassword = xpath(".//*[@data-test-id=\"passwordField\"]");
     private By typeMailButton = xpath(".//*[@data-test-id=\"loginFormSubmitButton\"]");
+    private By selectSortDown = xpath(".//*[@data-test-id=\"select-item-value-SORT_TYPE_PRICE_ASC\"]");
+
+    private By typeSortUp = xpath(".//*[@data-test-id=\"select-item-value-SORT_TYPE_PRICE_ASC\"]");
+    private By selectSort = By.xpath(".//*[@data-test-id=\"search-sortings\"]");
+
 
 
     public Main open() {
@@ -35,6 +40,20 @@ public class Main {
     }
 
     public SelenideElement getNameInLK(){
+
         return $(xpath(format(".//*[contains(text(),'Денис')]")));
     }
+
+    public SelenideElement setSortDown(){
+
+        return $(xpath(format(".//*[contains(text(),'Сначала дешевые')]")));
+    }
+
+    public void  clickSort(){
+        /*$(selectSort).click();
+        $(selectSortDown).click();*/
+        $(By.xpath(".//*[@id='__layout']/div/div[1]/div[3]/div[2]/div[2]/div[2]/div/div[1]/div/select")).selectOption("Сначала дешевые");
+
+    }
+
 }

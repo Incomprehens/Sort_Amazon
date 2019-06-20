@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Screenshots.takeScreenShot;
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -35,15 +36,19 @@ public class LK {
         main.getNameInLK().shouldBe(visible);
 
 
+
         Configuration.holdBrowserOpen = true;
 
     }
 
     @Test
-    public void Sort() {
-        Selenide.open("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/");
+    public void SortDown() {
+        open("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/");
 
-        main.sortUP
+        main.clickSort();
+       // main.setSortDown().shouldBe(visible).click();
+
+
         Configuration.holdBrowserOpen = true;
     }
 
