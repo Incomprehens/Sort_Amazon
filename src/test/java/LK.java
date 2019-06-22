@@ -64,6 +64,11 @@ public class LK {
 
             System.out.println(q1);
         }*/
+        System.out.println(main.getSortUP(1));
+        String str = main.getSortUP(1);
+        str = str.substring(0,str.length()-2);
+        int per1 = Integer.parseInt(str);
+        System.out.println("perl"+"="+per1);
 
 
     }
