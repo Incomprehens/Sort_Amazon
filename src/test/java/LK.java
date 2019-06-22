@@ -71,6 +71,13 @@ public class LK {
             str = str.substring(0, str.length() - 2);
             int per1 = Integer.parseInt(str);
             System.out.println("perl" + "=" + per1);
+
+            String str1 = main.getSortUP(i+1);
+            str1 = str1.substring(0, str1.length() - 2);
+            int per11 = Integer.parseInt(str1);
+
+            if (per1>per11) { System.out.println("все работает-"+per1+"<="+per11);}
+            else System.out.println("кароу все сломалось");
         }
 
     }
