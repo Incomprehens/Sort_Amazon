@@ -6,7 +6,9 @@ import org.openqa.selenium.By;
 import javax.xml.bind.Element;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static java.lang.String.format;
+import static org.openqa.selenium.By.cssSelector;
 import static org.openqa.selenium.By.xpath;
 
 public class Main {
@@ -54,6 +56,17 @@ public class Main {
         $(selectSortDown).click();*/
         $(By.xpath(".//*[@id='__layout']/div/div[1]/div[3]/div[2]/div[2]/div[2]/div/div[1]/div/select")).selectOption("Сначала дешевые");
 
+    }
+
+
+
+      private By price =  By.xpath(".//span[@data-test-id=\"tile-price\" and string-length(text())>0]");
+    public ElementsCollection getSort() {
+        return $$(price);
+    }
+
+    public String getSortUP(int number){
+        return getSort().get(number-1).text();
     }
 
 }

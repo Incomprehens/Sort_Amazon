@@ -1,8 +1,10 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
+import sun.text.normalizer.Replaceable;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Screenshots.takeScreenShot;
@@ -51,5 +53,21 @@ public class LK {
 
         Configuration.holdBrowserOpen = true;
     }
+
+    @Test
+    public void Sort2()    {
+        open("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/?sorting=price");
+
+        /*for (int i=0; i<20; i++)
+        {
+            int q1 = toString().substring(0, toString().indexOf(''));
+
+            System.out.println(q1);
+        }*/
+
+
+    }
+
+
 
 }
