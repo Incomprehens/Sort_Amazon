@@ -60,13 +60,22 @@ public class Main {
 
 
 
-      private By price =  By.xpath(".//span[@data-test-id=\"tile-price\" and string-length(text())>0]");
+    private By price =  By.xpath(".//span[@data-test-id=\"tile-price\" and string-length(text())>0]");
+
     public ElementsCollection getSort() {
+
         return $$(price);
     }
 
     public String getSortUP(int number){
+
         return getSort().get(number-1).text();
     }
+
+
+
+
+
+
 
 }

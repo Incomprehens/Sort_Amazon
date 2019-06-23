@@ -44,7 +44,7 @@ public class LK {
     }
 
     @Test
-    public void SortDown() {
+    public void SortDown1() {
         open("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/");
 
         main.clickSort();
@@ -55,7 +55,7 @@ public class LK {
     }
 
     @Test
-    public void Sort2()    {
+    public void SortUP()    {
         open("https://www.ozon.ru/category/telefony-i-smart-chasy-15501/?sorting=price");
 
         /*for (int i=0; i<20; i++)
@@ -81,6 +81,8 @@ public class LK {
         }
 
     }
+
+
 
 
 
