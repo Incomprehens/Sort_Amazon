@@ -78,6 +78,8 @@ public class LK {
 
             if (per1>per11) { System.out.println("все работает-"+per1+"<="+per11);}
             else System.out.println("кароу все сломалось");
+
+
         }
 
     }
